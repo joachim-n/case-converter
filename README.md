@@ -22,5 +22,11 @@ $output = \CaseConverter\CaseString::camel('MyString')->kebab();
 $output = \CaseConverter\CaseString::snake('my_string')->camel();
 $output = \CaseConverter\CaseString::snake('my_string')->pascal();
 $output = \CaseConverter\CaseString::snake('my_string')->kebab();
+```
 
+If your input string is in a format that requires custom splitting, you can
+pass the pieces to StringAssembler for output. For example:
+
+```
+$output = (new \CaseConverter\StringAssembler(['my', 'string']))->camel();
 ```
