@@ -1,6 +1,6 @@
 {
-    "name": "joachim/case-converter",
-    "description": "sfsfd",
+    "name": "joachim-n/case-converter",
+    "description": "Case converter library",
     "type": "library",
     "require": {
     },
