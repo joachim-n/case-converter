@@ -129,4 +129,34 @@ class StringAssembler {
     return implode(' ', $this->pieces);
   }
 
+  /**
+   * Outputs the pieces as a title case string.
+   *
+   * @return string
+   *   The resulting string.
+   */
+  public function sentence() {
+    $pieces = $this->pieces;
+
+    // Take off the first piece.
+    $first_piece = array_shift($pieces);
+
+    if ($this->areTitleCase) {
+      foreach ($pieces as &$piece) {
+        if (preg_match('@^[[:upper:]]+$@', $piece)) {
+          // Leave an entirely uppercase piece alone.
+          continue;
+        }
+
+        $piece = lcfirst($piece);
+      }
+    }
+
+    // Make the first piece into title case.
+    $first_piece = ucfirst($first_piece);
+    array_unshift($pieces, $first_piece);
+
+    return implode(' ', $pieces);
+  }
+
 }

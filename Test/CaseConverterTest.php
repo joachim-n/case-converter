@@ -38,6 +38,7 @@ class CaseConverterTest extends TestCase {
         'snake' => 'simple_string',
         'kebab' => 'simple-string',
         'title' => 'Simple String',
+        'sentence' => 'Simple string',
       ],
       'uppercase words' => [
         'camel' => 'somePHPCode',
@@ -45,6 +46,7 @@ class CaseConverterTest extends TestCase {
         'snake' => 'some_PHP_code',
         'kebab' => 'some-PHP-code',
         'title' => 'Some PHP Code',
+        'sentence' => 'Some PHP code',
       ],
       'lots of uppercase' => [
         'camel' => 'PHPProgrammersCodeInPHPBecauseTheyLikePHP',
@@ -52,6 +54,7 @@ class CaseConverterTest extends TestCase {
         'snake' => 'PHP_programmers_code_in_PHP_because_they_like_PHP',
         'kebab' => 'PHP-programmers-code-in-PHP-because-they-like-PHP',
         'title' => 'PHP Programmers Code In PHP Because They Like PHP',
+        'sentence' => 'PHP programmers code in PHP because they like PHP',
       ],
     ];
 

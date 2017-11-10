@@ -93,4 +93,24 @@ class CaseString {
     return (new StringAssembler($pieces))->areTitleCase();
   }
 
+  /**
+   * Takes a sentence case string.
+   *
+   * @param $string
+   *   The string.
+   *
+   * @return \CaseConverter\StringAssembler
+   *   A string assembler object with the string pieces set on it.
+   */
+  public static function sentence($string) {
+    $pieces = explode(' ', $string);
+
+    // Put the first word into lowercase, unless it's all capitals.
+    if (!preg_match('@^[[:upper:]]+$@', $pieces[0])) {
+      $pieces[0] = lcfirst($pieces[0]);
+    }
+
+    return new StringAssembler($pieces);
+  }
+
 }
