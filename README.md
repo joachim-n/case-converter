@@ -7,6 +7,14 @@ another. It handles, as both input and output:
 - kebab-case
 - Title Case
 
+Installation:
+
+With Composer:
+
+```
+$ composer require joachim-n/case-converter
+```
+
 Usage:
 
 ```
