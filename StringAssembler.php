@@ -15,6 +15,13 @@ class StringAssembler {
   protected $areTitleCase = FALSE;
 
   /**
+   * The string pieces.
+   *
+   * @var array
+   */
+  protected $pieces;
+
+  /**
    * Creates a new StringAssembler.
    *
    * @param array $pieces
